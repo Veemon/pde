@@ -181,7 +181,7 @@ diff[<span class="hljs-number">0</span>] = (y[<span class="hljs-number">1</span>
 top_diff = y[<span class="hljs-number">-1</span>] + (y[<span class="hljs-number">-1</span>] - y[<span class="hljs-number">-2</span>])
 diff[<span class="hljs-number">-1</span>] = (top_diff - y[<span class="hljs-number">-2</span>]) * recip
 </div></code></pre>
-<p><img src="file:///c:\Users\runner\per\pde\figures\1_1_sin.png" alt=""></p>
+<p><img src="figures\1_1_sin.png" alt=""></p>
 <h3 id="12-second-order---single-variable">1.2 Second Order - Single Variable</h3>
 <p>For a second order derivative, there is an altered form for the centred
 difference,</p>
@@ -214,7 +214,7 @@ diff[<span class="hljs-number">0</span>] = (y[<span class="hljs-number">1</span>
 top_diff = y[<span class="hljs-number">-1</span>] + (y[<span class="hljs-number">-1</span>] - y[<span class="hljs-number">-2</span>])
 diff[<span class="hljs-number">-1</span>] = (top_diff + y[<span class="hljs-number">-2</span>] - <span class="hljs-number">2</span>*y[<span class="hljs-number">-1</span>]) * recip
 </div></code></pre>
-<p><img src="file:///c:\Users\runner\per\pde\figures\1_2_sin.png" alt=""></p>
+<p><img src="figures\1_2_sin.png" alt=""></p>
 <h3 id="13-first-order---multiple-variables">1.3 First Order - Multiple Variables</h3>
 <p>Considering the multivariate case as an extension of the single variable derivation
 from prior,</p>
@@ -247,7 +247,7 @@ grad[:,:,<span class="hljs-number">0</span>] = z_bounds[<span class="hljs-number
 grad[:,:,<span class="hljs-number">1</span>] = z_bounds[<span class="hljs-number">2</span>:, <span class="hljs-number">1</span>:<span class="hljs-number">-1</span>] - z_bounds[:<span class="hljs-number">-2</span>,  <span class="hljs-number">1</span>:<span class="hljs-number">-1</span>]  <span class="hljs-comment"># f_y</span>
 grad *= recip
 </div></code></pre>
-<p><img src="file:///c:\Users\runner\per\pde\figures\1_3_sin.png" alt=""></p>
+<p><img src="figures\1_3_sin.png" alt=""></p>
 <h3 id="14-second-order---multiple-variables">1.4 Second Order - Multiple Variables</h3>
 <p>Likewise, the second order extension is,</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable rowspacing="0.24999999999999992em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><msub><mi>f</mi><mrow><mi>x</mi><mi>x</mi></mrow></msub><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>≈</mo><mfrac><mn>1</mn><msup><mi>h</mi><mn>2</mn></msup></mfrac><mo fence="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>h</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>+</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>h</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mn>2</mn><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo fence="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><msub><mi>f</mi><mrow><mi>y</mi><mi>y</mi></mrow></msub><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>≈</mo><mfrac><mn>1</mn><msup><mi>h</mi><mn>2</mn></msup></mfrac><mo fence="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>+</mo><mi>h</mi><mo stretchy="false">)</mo><mo>+</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>−</mo><mi>h</mi><mo stretchy="false">)</mo><mo>−</mo><mn>2</mn><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo fence="false">)</mo></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
@@ -261,7 +261,7 @@ grad[:,:,<span class="hljs-number">0</span>] = z_bounds[<span class="hljs-number
 grad[:,:,<span class="hljs-number">1</span>] = z_bounds[<span class="hljs-number">2</span>:, <span class="hljs-number">1</span>:<span class="hljs-number">-1</span>] + z_bounds[:<span class="hljs-number">-2</span>,  <span class="hljs-number">1</span>:<span class="hljs-number">-1</span>] - z2  <span class="hljs-comment"># f_yy</span>
 grad *= recip
 </div></code></pre>
-<p><img src="file:///c:\Users\runner\per\pde\figures\1_4_sin.png" alt=""></p>
+<p><img src="figures\1_4_sin.png" alt=""></p>
 <h2 id="2-the-laplace-equation">2. The Laplace Equation</h2>
 <h3 id="21-formulation">2.1 Formulation</h3>
 <p>Laplace's equation is given by the following,</p>
@@ -306,11 +306,11 @@ ub[<span class="hljs-number">0</span>] = condition(ub[<span class="hljs-number">
 
 </div></code></pre>
 <p>Evaluating at <code>n=16</code> and <code>t=128</code>, showing convergence.<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_2_laplace_16_128.gif" alt=""></p>
+<img src="figures\2_2_laplace_16_128.gif" alt=""></p>
 <p>Evaluating at <code>n=128</code> and <code>t=128</code>, convergence slows down dramatically.<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_2_laplace_128_128.gif" alt=""></p>
+<img src="figures\2_2_laplace_128_128.gif" alt=""></p>
 <p>Evaluating at <code>n=256</code> and <code>t=512</code>.<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_2_laplace_256_512.gif" alt=""></p>
+<img src="figures\2_2_laplace_256_512.gif" alt=""></p>
 <p>From this we can see that not only is convergence slow, but the rate of
 convergence is inversely proportional to the dimensions of the initial grid,
 which makes sense given the propagation process mentioned earlier.</p>
@@ -500,9 +500,9 @@ is algorithmically given by:</p>
 <p>Graphically this produces the following:</p>
 <ul>
 <li>a) Without smooth prolongation:<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_3_diagram_init.png" alt=""></li>
+<img src="figures\2_3_diagram_init.png" alt=""></li>
 <li>b) With smooth prolongation:<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_3_diagram_init_smooth.png" alt=""></li>
+<img src="figures\2_3_diagram_init_smooth.png" alt=""></li>
 </ul>
 <p>On the topic of initialisation, a good first estimation would of the problem
 could ofcourse arrive from merely solving the coarsest problem and prolongating
@@ -531,13 +531,13 @@ ub[<span class="hljs-number">0</span>] = prolong(coarse)
 The implication being that the mean squared error between convergence iterations will decrease until acceptable.
 Running at a tolerance of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-6}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span>, for at a size of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><msup><mn>6</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">256^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord"><span class="mord">6</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>, traversing 6 grids, applying 30 smoothing iterations on each grid,
 and 50 on the coarsest grid.<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_3_tol_V_256_6_30_50_1e-6.png" alt=""></p>
+<img src="figures\2_3_tol_V_256_6_30_50_1e-6.png" alt=""></p>
 <p>With initialisation,<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_3_tol_V_256_6_30_50_1e-6_init.png" alt=""></p>
+<img src="figures\2_3_tol_V_256_6_30_50_1e-6_init.png" alt=""></p>
 <p>With smooth prolongation,<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_3_tol_V_256_6_30_50_1e-6_smooth.png" alt=""></p>
+<img src="figures\2_3_tol_V_256_6_30_50_1e-6_smooth.png" alt=""></p>
 <p>With initialisation and smooth prolongation,<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_3_tol_V_256_6_30_50_1e-6_init_smooth.png" alt=""></p>
+<img src="figures\2_3_tol_V_256_6_30_50_1e-6_init_smooth.png" alt=""></p>
 <h4 id="w-cycles">W-Cycles</h4>
 <p>Another scheme for grid traversal is the W-Cycle, in which instead of traversing upwards the full path,
 one:</p>
@@ -546,13 +546,13 @@ one:</p>
 <li>traverse downward to the coarsest grid</li>
 <li>traverse upwards to the finest grid</li>
 </ul>
-<p><img src="file:///c:\Users\runner\per\pde\figures\2_3_tol_W_256_6_30_50_1e-6.png" alt=""></p>
+<p><img src="figures\2_3_tol_W_256_6_30_50_1e-6.png" alt=""></p>
 <p>With initialisation,<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_3_tol_W_256_6_30_50_1e-6_init.png" alt=""></p>
+<img src="figures\2_3_tol_W_256_6_30_50_1e-6_init.png" alt=""></p>
 <p>With smooth prolongation,<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_3_tol_W_256_6_30_50_1e-6_smooth.png" alt=""></p>
+<img src="figures\2_3_tol_W_256_6_30_50_1e-6_smooth.png" alt=""></p>
 <p>With initialisation and smooth prolongation,<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_3_tol_W_256_6_30_50_1e-6_init_smooth.png" alt=""></p>
+<img src="figures\2_3_tol_W_256_6_30_50_1e-6_init_smooth.png" alt=""></p>
 <h3 id="24-a-gpu-coarse-to-fine-approach">2.4 A GPU Coarse-to-Fine Approach</h3>
 <h4 id="laplace-iteration-as-convolution">Laplace iteration as convolution</h4>
 <p>The laplace iteration can be turned into a kernel used in 2D-convolution, which is very popular in the deep learning
@@ -591,9 +591,9 @@ multi_grid[i+<span class="hljs-number">1</span>][:,<span class="hljs-number">0</
 </div></code></pre>
 <p>This converges much faster than both V-Cycles and W-Cycles. For a <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><msup><mn>6</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">256^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord"><span class="mord">6</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> fine grid, at 6 traversals
 and a tolerance of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-6}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span>.<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_4_256_6_1e-6_cpu.png" alt=""></p>
+<img src="figures\2_4_256_6_1e-6_cpu.png" alt=""></p>
 <p>Extending to a <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>204</mn><msup><mn>8</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2048^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">4</span><span class="mord"><span class="mord">8</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> fine grid with 10 traversals at a tolerance of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-6}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span> is done easily.<br>
-<img src="file:///c:\Users\runner\per\pde\figures\2_4_2048_10_1e-6_cpu.png" alt=""></p>
+<img src="figures\2_4_2048_10_1e-6_cpu.png" alt=""></p>
 <h2 id="3-poisson-and-helmholtz-equations">3. Poisson and Helmholtz Equations</h2>
 <h3 id="31-poissons-equation">3.1 Poisson's Equation</h3>
 <p>Naive</p>
